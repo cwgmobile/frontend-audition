@@ -8,21 +8,32 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.bundle.js',
   },
+  devServer: {
+    //contentBase: path.join(__dirname, 'dist'),
+    liveReload: true,
+    port: 5080,
+    open: true,
+  },
   module: {
     rules: [
       {
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
+      {
+        use: ["style-loader", "css-loader"],
         test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ],
+      },
+      {
+        type: "asset/resource",
+        test: /\.(svg|ico|png|webp|jpg|gif|jpeg)$/i,
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: './src/app.html',
+      filename: "index.html",
+      template: "./src/app.html",
     }),
   ],
 };
