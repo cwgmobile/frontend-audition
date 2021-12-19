@@ -1,5 +1,6 @@
 import axios from 'axios';
 import '/src/assets/page.css';
+import '/src/assets/photo-card.css';
 
 import photoCard from './components/photoCard';
 
