@@ -43,11 +43,10 @@ function renderPhotos(rendered) {
       container.appendChild(photoCard(photo));
     }
   });
-  
   // chamando função para paginar as fotos
   paginator();
-}// criando função para paginar as fotos
-
+}
+// criando função para paginar as fotos
 function paginator() {
   if (totalPhotos>= lastElement) {
     var p = document.getElementById('element-num');
