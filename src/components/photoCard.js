@@ -5,9 +5,9 @@ export default function photoCard(item) {
   img.src = item.url;
   const txt = document.createElement('div');
   txt.innerHTML = item.title;
-  txt.className = 'title';
+  txt.className = "title";
   const card = document.createElement('div');
-  card.className = 'photo-card';
+  card.className = "photo-card";
   card.appendChild(img);
   card.appendChild(txt);
   return card;

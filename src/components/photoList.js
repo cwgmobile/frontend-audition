@@ -1,5 +1,4 @@
-import "../assets/listphotos.css";
-
+import "../assets/photoList.css";
 
 export default function photoList(item) {
   const img = document.createElement("img");

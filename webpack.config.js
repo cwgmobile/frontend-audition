@@ -14,6 +14,8 @@ module.exports = {
     port: 5080,
     open: true,
   },
+
+  
   module: {
     rules: [
       {
@@ -21,12 +23,12 @@ module.exports = {
         loader: "html-loader",
       },
       {
-        use: ["style-loader", "css-loader"],
         test: /\.css$/,
+        use: ["style-loader", "css-loader"],
       },
       {
-        type: "asset/resource",
         test: /\.(svg|ico|png|webp|jpg|gif|jpeg)$/i,
+        type: "asset/resource",
       },
     ],
   },
