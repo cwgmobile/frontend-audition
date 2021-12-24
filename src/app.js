@@ -2,8 +2,12 @@ import axios from 'axios';
 import '/src/assets/page.css';
 import '/src/assets/photo-card.css';
 
+
 import photoCard from "./components/photoCard";
 import photoList from "./components/photoList";
+
+
+
 
 // criando as variaveis para armazenar os elementos
 var photos = [];
@@ -21,7 +25,6 @@ function getPhotos() {
   .get("https://jsonplaceholder.typicode.com/photos")
   .then(function (response) {
     photos = response.data;
-    // Carrega fotos na tela
     renderPhoto = photos;
     totalPhotos = photos.length;
     renderPhotos(renderPhoto);
